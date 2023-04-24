@@ -133,13 +133,31 @@ body{
      }
     
 }
-.btn:link{
+
+
+@keyframes buttonMovedownToUP {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+.btn:link,.btn:visited{
     text-transform: uppercase;
     text-decoration: none;
     padding: 15px 40px;
     display: inline-block;
 
+    border-radius: 100px;
+
     transition: all .2s;
+
+    position: relative;
+
 }
 
 .btn:hover{
@@ -155,4 +173,32 @@ body{
 .btn-white{
     background-color: #fff;
     color: #777;
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after{
+    background-color: white;
+}
+
+.btn:hover::after{
+    /* transform: scale(1.2); */
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.button-animate{
+    animation: buttonMovedownToUP .5s ease-out .60s; /*ease out means fast at begining and slow at end, .75s means when animation should start*/
+    animation-fill-mode: backwards; /* so as we have added delay in animation so in start our button will still be visible in original position , to avoid that use this property */
 }
