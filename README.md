@@ -72,3 +72,11 @@ To use above code we will add its name(moveTextToLeft) to that element in css
 
     animation-delay: 3s; /* this will start animation after 3 seconds*/
     animation-iteration-count: 2; /*number of times animation happens*/
+
+
+
+## section 2, lec 9
+
+* what pseudo-elements and pseudo-classes are;
+* How and why to use the ::after pseudo-element
+* How to create a creative hover animation effect using the transition property
