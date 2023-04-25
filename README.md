@@ -80,3 +80,5 @@ To use above code we will add its name(moveTextToLeft) to that element in css
 * what pseudo-elements and pseudo-classes are;
 * How and why to use the ::after pseudo-element
 * How to create a creative hover animation effect using the transition property
+
+
