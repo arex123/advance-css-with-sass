@@ -60,16 +60,16 @@ body{
     /* clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); */
 }
 
-.logo-box{
+.header__logo-box{
     position: absolute;
     top:4rem;
     left: 4rem;
 }
-.logo{
+.header__logo{
     height: 3.5rem;    
 }
 
-.text-box{
+.header__text-box{
     position: absolute;
     top: 45%;
     left: 50%;
@@ -86,7 +86,7 @@ body{
     margin-bottom: 4rem;
 }
 
-.heading-primary-main{
+.heading-primary--main{
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
@@ -99,7 +99,7 @@ body{
     /* animation-delay: 3s; this will start animation after 3 seconds */
     /* animation-iteration-count: 2; number of times animation happens */
 }
-.heading-primary-sub{
+.heading-primary--sub{
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
@@ -178,7 +178,7 @@ body{
     box-shadow: 0 .5rem .5rem rgba(0,0,0,.2);
 }
 
-.btn-white{
+.btn--white{
     background-color: #fff;
     color: #777;
 }
@@ -196,7 +196,7 @@ body{
     transition: all .4s;
 }
 
-.btn-white::after{
+.btn--white::after{
     background-color: white;
 }
 
@@ -206,7 +206,7 @@ body{
     opacity: 0;
 }
 
-.button-animate{
+.btn--animate{
     animation: buttonMovedownToUP .5s ease-out .60s; /*ease out means fast at begining and slow at end, .75s means when animation should start*/
     animation-fill-mode: backwards; /* so as we have added delay in animation so in start our button will still be visible in original position , to avoid that use this property */
 }
