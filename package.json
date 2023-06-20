@@ -1,0 +1,15 @@
+{
+  "name": "advance-css-sass",
+  "version": "1.0.0",
+  "description": "/* clip-path:polygon(x y, x y, x y, x y);  it behave as clockwise direction  */",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
