@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* COLORS: */
 *,
 *::after,
 *::before {
@@ -12,13 +11,64 @@ html {
   font-size: 62.5%; }
 
 body {
+  box-sizing: border-box; }
+
+@keyframes moveTextToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveTextToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes buttonMovedownToUP {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* backface-visibility: hidden; */
+  margin-bottom: 4rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveTextToLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 3s; this will start animation after 3 seconds */
+    /* animation-iteration-count: 2; number of times animation happens */ }
+  .heading-primary--sub {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveTextToRight 1s; }
+
+body {
   font-family: "Lato", sans-serif;
   font-size: 400;
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
+  padding: 3rem; }
 
 .header {
   position: relative;
@@ -55,55 +105,6 @@ body {
     transform: translate(-50%, -50%);
     /* it will be shifted to half of the width of elements (iteselfs) height*/
     text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /* backface-visibility: hidden; */
-  margin-bottom: 4rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveTextToLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    /* animation-delay: 3s; this will start animation after 3 seconds */
-    /* animation-iteration-count: 2; number of times animation happens */ }
-  .heading-primary--sub {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveTextToRight 1s; }
-
-@keyframes moveTextToLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveTextToRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes buttonMovedownToUP {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -149,3 +150,20 @@ body {
   /*ease out means fast at begining and slow at end, .75s means when animation should start*/
   animation-fill-mode: backwards;
   /* so as we have added delay in animation so in start our button will still be visible in original position , to avoid that use this property */ }
+
+.row {
+  max-width: 114rem;
+  background-color: yellow;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+    background-color: pink;
+    float: left; }
+    .row .col-1-of-2:not(:last-child) {
+      margin-right: 6rem; }
