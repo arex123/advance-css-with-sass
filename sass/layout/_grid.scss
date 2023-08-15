@@ -2,7 +2,7 @@
 .row{
     // max-width: 114rem; //commonly used width 1140px = 140rem
     max-width: $grid-width;
-    background-color: yellow;
+    // background-color: yellow;
 
     margin: 0 auto; //margin 0 for top bottom and auto(automatically) for left and right
 
@@ -14,7 +14,7 @@
     }
 
     [class^="col-"]{
-        background-color: pink;
+        // background-color: pink;
         
         float: left;
         
