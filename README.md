@@ -82,3 +82,35 @@ To use above code we will add its name(moveTextToLeft) to that element in css
 * How to create a creative hover animation effect using the transition property
 
 
+
+## Basic responsive Design Principples
+
+### Fluid Layouts
+    *   To allow webpage to adapt to the current viewport width (or even height)
+    *   use % (or vh/ve)unit instead of px for elements that should adapt to viewport
+    *   use max-width instead of width
+
+
+### Responsive units
+    *   Use rem unit instead of px for most length
+    *   to make it easy to scale entire layout down (or up) automatically
+
+### Flexible images
+    *   By default, images don't scale automatically as change the viewport, so we need to fix that
+    *   Always use % for image dimensions, together with the max-width property
+
+### Media queries
+    *   To change CSS styles on certain viewport widths(called breakpoints)
+
+
+
+## Layout Types
+
+ * float layout: older way of building layout using float property, 1st project
+ * flexbox : modern way of laying out elements in 1 1-dimensional row without using floats. Perfect for component layouts. 2d project
+ * CSS grid : For fully fledge layout 2-d grid, 3rd project
+
+
+
+
+
