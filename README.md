@@ -1,3 +1,5 @@
+start : npm run compile:sass
+
 /* clip-path:polygon(x y, x y, x y, x y);  it behave as clockwise direction  */
 
     clip-path: polygon(0% 0%,100% 0%,100% 80%,0 100%);

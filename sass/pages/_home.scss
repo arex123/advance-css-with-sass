@@ -3,3 +3,74 @@
     padding: 25rem 0;
     margin-top: -20vh;
 }
+
+.section-features{
+    padding: 20rem 0;
+
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+        url(../img/nat-4.jpg);
+    /* above line will create color changing effect from one color to another (#55c57a  -> #28b485) from top left "to right bottom" , and in order to show img we have decreased the color opacity */
+    background-size: cover;
+    background-position: top;
+
+    /* clip-path:polygon(x y, x y, x y, x y);  it behave as clockwise direction  */
+    // clip-path: polygon(0% 20%, 100% 0%, 100% 55vh, 0 100%);
+
+    //instead of using clip path we will use skew to rotate the bg image 
+    transform: skewY(-7deg); //it will rotate all even inner child 
+
+    //to avoid rotating inner child we will rotate direct child of this tag to +7 deg
+    & > * { //to point to the direct child of section-features
+        transform: skewY(7deg);
+    }
+
+    margin-top: -10rem;
+
+
+
+}
+
+.section-tours{
+    background-color: $color-grey-light;
+    padding: 25rem 0 15rem 0; //top right bottom left
+    margin-top: -10rem;
+}
+
+.section-stories{
+    position: relative;
+    padding: 15rem 0;
+    // background-color: $color-grey-light;
+}
+
+.section-book{
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+}
+
+.book{
+    //below bg imgage css will make a the partition type of division so we dont need to use clip path 
+    background-image: linear-gradient(105deg,
+                                            rgba($color-white,.9) 0%,
+                                            rgba($color-white,.9) 50%,
+                                            transparent 50%
+                                            ),
+                                    url(../img/nat-10.jpg);
+
+    //below loc will also do the same as above
+    // background-image: linear-gradient(105deg,rgba($color-white,.9) 50%, transparent 50%) , url(../img/nat-10.jpg);
+
+    //below is for half partitioning
+    // background-image: linear-gradient(90deg,rgba($color-white,.9) 50%, transparent 50%) , url(../img/nat-10.jpg);
+
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    height: 50rem;
+
+    &__form {
+        width:50%;
+        padding: 6rem;
+    }
+}
